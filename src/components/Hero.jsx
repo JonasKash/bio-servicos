@@ -80,10 +80,12 @@ const Subtitle = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center; /* Essential for centering children in flex column */
   gap: 1rem;
   
   p {
     margin: 0;
+    text-align: center;
   }
 
   b {
