@@ -99,6 +99,34 @@ const Highlight = styled.span`
   font-weight: 600;
 `;
 
+const HeroButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+  background: ${({ theme }) => theme.colors.primary};
+  color: #000000;
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  border-radius: 4px;
+  font-family: ${({ theme }) => theme.typography.fontFamily};
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all ${({ theme }) => theme.transitions.standard};
+  font-size: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  z-index: 2;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.accent};
+    border-color: ${({ theme }) => theme.colors.accent};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(140, 255, 98, 0.3);
+  }
+`;
+
 export const Hero = () => {
   return (
     <HeroSection id="inicio">
@@ -120,16 +148,13 @@ export const Hero = () => {
           <p>Mas e se existisse um método que mostra, em tempo real, quantas pessoas visitaram sua bio, quantas clicaram, e sua taxa real de conversão?</p>
           <p><b>Sem pagar R$3.000/mês. Sem ferramentas complicadas. Implementável em 30 minutos.</b></p>
         </Subtitle>
-        <Button
-          as="a"
+        <HeroButton
           href="https://wa.me/5582987611611?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20link%20na%20bio."
           target="_blank"
           rel="noopener noreferrer"
-          variant="primary"
-          style={{ fontSize: '20px', padding: '15px 40px', fontWeight: 700, color: '#000000', marginTop: '20px' }}
         >
           QUERO SABER MAIS!
-        </Button>
+        </HeroButton>
       </Content>
     </HeroSection>
   );
